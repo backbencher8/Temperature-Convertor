@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="bibek">
+    <meta name="description" content="Temperature convertor app using HTML, CSS, JS, JavaScript">
+    <meta name="keywords" content="Temperature convertor, convertor, Temperature convertor, bharat intern, bharat intern task, bharat intern Temperature convertor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    <title>Temperature Convertor</title>
+</head>
+<body>
+    <header>
+            <!-- <a href="#">Logo</a> -->
+            <div class="container heading-holder">
+                <h1>
+                    Temperature convertor
+                </h1>
+            </div>
+    </header>   
+<!-- ================================================= Header ends =================================================== -->
+    <section>
+        <div class="container content-holder">
+    <!-- div holding form elements =================== -->
+            <div class="left-div">
+                <form action="#">
+                    <label for="celsius">Celsius</label>
+                    <input name= "celsius" id="celsius" type="number" placeholder="Temperature in celsius">
+                    
+                    <label for="celsius">Ferhneit</label>
+                    <input name= "ferhneit" id="ferhneit" type="number" placeholder="Temperature in ferhneit">
+                    
+                    <label for="celsius">Kelvin</label>
+                    <input name= "kelvin" id="kelvin" type="number" placeholder="Temperature in kelvin ">
+                        <div class="button-holder">
+                            <button type="button" id="clearTemp" class="set-temp">Clear</button>
+                        </form>
+                    </div>
+            </div>
+
+    <!-- div holding meter and suggestion ============================ -->
+            <div class="right-div">
+                <div class="meter" id="meter">
+                    <div class="divider"></div>
+                </div>
+                <span id="suggestion">Temperature is hot. Stay hydrated</span>
+            </div>
+        </div>
+    </section>
+<!-- ================================================= Section ends ================================================== -->
+    <script src="js/index.js"></script>
+</body>
+</html>

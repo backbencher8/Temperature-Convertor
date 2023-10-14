@@ -1,0 +1,193 @@
+:root{
+    --color-aqua-transparent: #44F7EC;
+    --color-seagreen-transparent: #C8FBEF;
+    --color-gray: #6B6C70;
+    --color-background: #9bf1f251;
+
+    --container-width-lg: 64%;
+    --container-width-md: 78%;
+    --form-width: 40%;
+
+    --transition-efffect: all 300ms ease;
+
+    --card-border-radius: .8rem;
+    --card-border-radius-2: .4rem;
+    --card-border-radius-3: .2rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray);
+    overflow-x: hidden;
+    background-color: var(--color-background);
+    font-size: 0.9rem;
+}
+.container{
+    width: var(--container-width-lg);
+    max-width: 1880px;
+    margin: 0 auto;
+}
+.heading-holder{
+    background-color: var(--color-aqua-transparent);    
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--card-border-radius);
+    margin-top: 2rem;
+}
+/* ===================================== Section Starts =========================== */
+section {
+    margin-top: 2rem;
+    width: 100vw;
+}
+.content-holder{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-aqua-transparent);
+    border-radius: var(--card-border-radius);
+}
+.left-div{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 1.8rem;
+}
+input{
+    display: block;
+    padding: .8rem;
+    width: 100%;
+    margin-bottom   : .8rem;
+    border-radius: var(--card-border-radius-2);
+    color: var(--color-gray);
+}
+
+input::placeholder{
+    font-size: .8rem;
+}
+.button-holder{
+    margin-top: .8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.set-temp{
+    width: 5rem;
+    margin-top: 1.2rem;
+    padding: .5rem;
+    color: white;
+    transition: var(--transition-efffect);
+    border-radius: var(--card-border-radius-3);
+    background-color: rgb(227, 15, 15);
+}
+.set-temp:hover{
+    cursor: pointer;
+}
+
+/*=============================== right div styling============================== */
+.right-div{
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+    background-color: var(--color-seagreen-transparent);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 var(--card-border-radius) var(--card-border-radius)  0;
+}
+.right-div .meter{
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    border: 20px solid white;
+    border-radius: 100px;
+    transition: var(--transition-efffect);
+}
+.divider{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-seagreen-transparent);
+    position: relative;
+    top: 40px;
+    left: -30px;
+
+}
+/* ========================Media Queries for medium devices========================== */
+@media screen and (max-width: 1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+    .heading-holder{
+        padding: 1rem;
+    }
+    .left-div{
+        width: 80%;
+        padding: 1rem;
+    }
+    input{
+        padding: .6rem;
+    }
+    input::placeholder{
+        font-size: .7rem;
+    }
+}
+/* =============================== media queries for small screen  laptops =========================== */
+@media screen and (max-width: 513px){
+    .container{
+        width: var(--container-width-md);
+    }
+    .right-div{
+        width: 40%;
+    }
+    .right-div .meter{
+        height: 80px;
+        width: 80px;
+        border: 10px solid rgb(194, 52, 241);
+    }
+}
+/* ============================= media queries for tablets ======================== */
+@media screen and (max-width: 425px){
+    .set-temp{
+        width: 3rem;
+    }
+}
+/* ==================== media queries for mobile devices ============================= */
+@media screen and (max-width: 360px){
+    .heading-holder{
+        padding:.8rem ;
+        font-size: .6rem;
+    }
+    input{
+        font-size: .5rem;
+    }
+    .content-holder{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .right-div{
+        width: 100%;
+        border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+    }
+    .meter{
+        margin-bottom: .8rem;
+    }
+    .set-temp{
+        margin-top: .5rem;
+    }
+}
+@media screen and (max-width: 300px){
+    .heading-holder{
+        font-size: .4rem;
+    }
+    section{
+        margin-top: 1rem;
+    } 
+}
